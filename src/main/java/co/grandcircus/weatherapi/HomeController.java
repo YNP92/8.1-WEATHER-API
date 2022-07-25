@@ -13,26 +13,26 @@ public class HomeController {
     @Autowired
     private WeatherAPIService weatherAPIService;
 
-    // @RequestMapping("/")
-    // public String showSearch() {
-    // return "index";
-    // }
-
-
     @RequestMapping("/")
-    public String showForecast(Model model) {
-        model.addAttribute("forecast", weatherAPIService.getForecastResponse());
-        System.out.println();
-        return "showforecast";
+    public String showSearch() {
+        return "index";
     }
 
-    // @PostMapping("/")
-    // public String showSearch(@RequestParam double longitude, @RequestParam double latitude,
-    // Model model) {
-    // model.addAttribute("forecast", weatherAPIService.getForecastResponse(latitude, longitude));
-    // System.out.println(model.toString());
+
+    // @RequestMapping("/")
+    // public String showForecast(Model model) {
+    // model.addAttribute("forecast", weatherAPIService.getForecastResponse());
+    // System.out.println();
     // return "showforecast";
     // }
+
+    @PostMapping("/")
+    public String showSearch(@RequestParam double longitude, @RequestParam double latitude,
+            Model model) {
+        model.addAttribute("forecast", weatherAPIService.getForecastResponse(latitude, longitude));
+        System.out.println(model.toString());
+        return "showforecast";
+    }
 
 
 }
