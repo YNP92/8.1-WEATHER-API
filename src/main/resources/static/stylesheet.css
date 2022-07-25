@@ -1,0 +1,81 @@
+@charset "ISO-8859-1";
+* {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+body {
+  background-color: cadetblue;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 500%;
+}
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.credit {
+  font-size: large;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+input:valid {
+  border: 2px solid black;
+}
+textarea:invalid {
+  border: 2px dashed red;
+}
+textarea:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+textarea:valid {
+  border: 2px solid black;
+}
+
+.currentstats {
+  border: 1px solid black;
+  width: fit-content;
+  align-content: inherit;
+}
+
+.button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: chocolate;
+  border: none;
+  color: white;
+  padding-top: 10px;
+  padding: bottom 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #e7e7e7;
+  color: black;
+}
